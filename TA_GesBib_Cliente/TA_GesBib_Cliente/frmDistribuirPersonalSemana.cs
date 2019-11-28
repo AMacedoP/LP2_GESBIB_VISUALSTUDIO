@@ -99,7 +99,7 @@ namespace TA_GesBib_Cliente
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            ((frmPerfilGestor)this.var_formPerfil).PanelBIPO.Visible = true;
+            //((frmPerfilGestor)this.var_formPerfil).PanelBIPO.Visible = true;
         }
 
         private void btnBuscarDistribucion_Click(object sender, EventArgs e)

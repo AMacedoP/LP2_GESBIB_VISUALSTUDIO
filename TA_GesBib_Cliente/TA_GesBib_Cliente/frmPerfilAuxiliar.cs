@@ -565,7 +565,7 @@ namespace TA_GesBib_Cliente
 
                 }
 
-                //hoy agregeishion
+                var_frmVerHorarios_Auxiliar.Size = new Size(930, 657);
 
                 lblBienvenido.Visible = false;
                 panelAviso.Visible = false;

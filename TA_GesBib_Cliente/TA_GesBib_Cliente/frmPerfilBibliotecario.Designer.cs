@@ -32,10 +32,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblTipoPerfil = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.btnDistribuir_Personal = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnSolicitar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnConfiguracion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,7 +44,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.panelBtn_Solicitar = new System.Windows.Forms.Panel();
-            this.btnSolicitar_CambioTurno = new System.Windows.Forms.Button();
             this.btnSolicitar_HLibres = new System.Windows.Forms.Button();
             this.panelBtn_Registrar = new System.Windows.Forms.Panel();
             this.btnReg_Inas = new System.Windows.Forms.Button();
@@ -93,11 +90,11 @@
             // lblTipoPerfil
             // 
             this.lblTipoPerfil.AutoSize = true;
-            this.lblTipoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoPerfil.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTipoPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblTipoPerfil.Location = new System.Drawing.Point(106, 15);
             this.lblTipoPerfil.Name = "lblTipoPerfil";
-            this.lblTipoPerfil.Size = new System.Drawing.Size(146, 20);
+            this.lblTipoPerfil.Size = new System.Drawing.Size(140, 23);
             this.lblTipoPerfil.TabIndex = 10;
             this.lblTipoPerfil.Text = "BIBLIOTECARIO";
             this.lblTipoPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -105,36 +102,14 @@
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreUsuario.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblNombreUsuario.Location = new System.Drawing.Point(106, 46);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(41, 20);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(42, 23);
             this.lblNombreUsuario.TabIndex = 0;
             this.lblNombreUsuario.Text = "Bob";
             this.lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnDistribuir_Personal
-            // 
-            this.btnDistribuir_Personal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnDistribuir_Personal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDistribuir_Personal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDistribuir_Personal.FlatAppearance.BorderSize = 0;
-            this.btnDistribuir_Personal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDistribuir_Personal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDistribuir_Personal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDistribuir_Personal.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_personal2;
-            this.btnDistribuir_Personal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDistribuir_Personal.Location = new System.Drawing.Point(0, 0);
-            this.btnDistribuir_Personal.Name = "btnDistribuir_Personal";
-            this.btnDistribuir_Personal.Padding = new System.Windows.Forms.Padding(10, 0, 1, 0);
-            this.btnDistribuir_Personal.Size = new System.Drawing.Size(292, 59);
-            this.btnDistribuir_Personal.TabIndex = 10;
-            this.btnDistribuir_Personal.Text = "Distribución Personal";
-            this.btnDistribuir_Personal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDistribuir_Personal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDistribuir_Personal.UseVisualStyleBackColor = false;
-            this.btnDistribuir_Personal.Click += new System.EventHandler(this.btnDistribuir_Personal_Click);
             // 
             // btnRegistrar
             // 
@@ -143,14 +118,14 @@
             this.btnRegistrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRegistrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_modificar;
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(0, 108);
+            this.btnRegistrar.Location = new System.Drawing.Point(0, 49);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Padding = new System.Windows.Forms.Padding(10, 0, 1, 0);
-            this.btnRegistrar.Size = new System.Drawing.Size(292, 40);
+            this.btnRegistrar.Size = new System.Drawing.Size(292, 54);
             this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = "    Horas extras / Inasistencias";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -164,30 +139,18 @@
             this.btnSolicitar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSolicitar.FlatAppearance.BorderSize = 0;
             this.btnSolicitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolicitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSolicitar.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnSolicitar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSolicitar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
             this.btnSolicitar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSolicitar.Location = new System.Drawing.Point(0, 237);
+            this.btnSolicitar.Location = new System.Drawing.Point(0, 192);
             this.btnSolicitar.Name = "btnSolicitar";
             this.btnSolicitar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSolicitar.Size = new System.Drawing.Size(292, 40);
             this.btnSolicitar.TabIndex = 50;
-            this.btnSolicitar.Text = "Horas libres / Cambio turno";
-            this.btnSolicitar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSolicitar.Text = "Horas libres";
             this.btnSolicitar.UseVisualStyleBackColor = false;
             this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(67)))), ((int)(((byte)(232)))));
-            this.label2.Location = new System.Drawing.Point(13, 538);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "_______________________________";
             // 
             // btnCerrarSesion
             // 
@@ -196,7 +159,7 @@
             this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCerrarSesion.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrar_sesion_pequeño;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,7 +180,7 @@
             this.btnConfiguracion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConfiguracion.FlatAppearance.BorderSize = 0;
             this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracion.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnConfiguracion.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnConfiguracion.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_configuracion_pequeño;
             this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -239,7 +202,6 @@
             this.panel1.Controls.Add(this.btnCapac);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pbMinifoto);
             this.panel1.Controls.Add(this.lblTipoPerfil);
@@ -247,21 +209,24 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(319, 790);
+            this.panel1.Size = new System.Drawing.Size(319, 679);
             this.panel1.TabIndex = 55;
             this.panel1.TabStop = true;
             // 
             // buttonVerOtrosPerfiles
             // 
+            this.buttonVerOtrosPerfiles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonVerOtrosPerfiles.AutoSize = true;
             this.buttonVerOtrosPerfiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.buttonVerOtrosPerfiles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonVerOtrosPerfiles.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonVerOtrosPerfiles.FlatAppearance.BorderSize = 0;
             this.buttonVerOtrosPerfiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonVerOtrosPerfiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVerOtrosPerfiles.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.buttonVerOtrosPerfiles.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.buttonVerOtrosPerfiles.Location = new System.Drawing.Point(19, 554);
+            this.buttonVerOtrosPerfiles.Location = new System.Drawing.Point(46, 488);
             this.buttonVerOtrosPerfiles.Name = "buttonVerOtrosPerfiles";
             this.buttonVerOtrosPerfiles.Size = new System.Drawing.Size(238, 56);
             this.buttonVerOtrosPerfiles.TabIndex = 61;
@@ -278,7 +243,7 @@
             this.btnCapac.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapac.FlatAppearance.BorderSize = 0;
             this.btnCapac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapac.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnCapac.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_aula_50;
             this.btnCapac.Location = new System.Drawing.Point(10, 85);
             this.btnCapac.Name = "btnCapac";
@@ -291,10 +256,13 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.btnCerrarSesion);
             this.panel4.Controls.Add(this.btnConfiguracion);
-            this.panel4.Location = new System.Drawing.Point(16, 607);
+            this.panel4.Location = new System.Drawing.Point(43, 541);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(211, 86);
             this.panel4.TabIndex = 17;
@@ -327,10 +295,9 @@
             this.panel3.Controls.Add(this.panelBtn_Registrar);
             this.panel3.Controls.Add(this.btnRegistrar);
             this.panel3.Controls.Add(this.btnVisualizarHorarios);
-            this.panel3.Controls.Add(this.btnDistribuir_Personal);
             this.panel3.Location = new System.Drawing.Point(10, 135);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(292, 400);
+            this.panel3.Size = new System.Drawing.Size(292, 331);
             this.panel3.TabIndex = 16;
             // 
             // btnNotificaciones
@@ -340,47 +307,27 @@
             this.btnNotificaciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNotificaciones.FlatAppearance.BorderSize = 0;
             this.btnNotificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotificaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNotificaciones.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnNotificaciones.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnNotificaciones.Image = global::TA_GesBib_Cliente.Properties.Resources.tinker_45;
             this.btnNotificaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotificaciones.Location = new System.Drawing.Point(0, 365);
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 274);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNotificaciones.Size = new System.Drawing.Size(292, 40);
             this.btnNotificaciones.TabIndex = 61;
             this.btnNotificaciones.Text = "        Notificaciones";
-            this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotificaciones.UseVisualStyleBackColor = false;
             this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
             // 
             // panelBtn_Solicitar
             // 
-            this.panelBtn_Solicitar.Controls.Add(this.btnSolicitar_CambioTurno);
             this.panelBtn_Solicitar.Controls.Add(this.btnSolicitar_HLibres);
             this.panelBtn_Solicitar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBtn_Solicitar.Location = new System.Drawing.Point(0, 277);
+            this.panelBtn_Solicitar.Location = new System.Drawing.Point(0, 232);
             this.panelBtn_Solicitar.Name = "panelBtn_Solicitar";
-            this.panelBtn_Solicitar.Size = new System.Drawing.Size(292, 88);
+            this.panelBtn_Solicitar.Size = new System.Drawing.Size(292, 42);
             this.panelBtn_Solicitar.TabIndex = 60;
-            // 
-            // btnSolicitar_CambioTurno
-            // 
-            this.btnSolicitar_CambioTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.btnSolicitar_CambioTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSolicitar_CambioTurno.FlatAppearance.BorderSize = 0;
-            this.btnSolicitar_CambioTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolicitar_CambioTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolicitar_CambioTurno.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSolicitar_CambioTurno.Location = new System.Drawing.Point(37, 42);
-            this.btnSolicitar_CambioTurno.Name = "btnSolicitar_CambioTurno";
-            this.btnSolicitar_CambioTurno.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnSolicitar_CambioTurno.Size = new System.Drawing.Size(252, 40);
-            this.btnSolicitar_CambioTurno.TabIndex = 62;
-            this.btnSolicitar_CambioTurno.Text = "> Pedir Cambio de Turno";
-            this.btnSolicitar_CambioTurno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSolicitar_CambioTurno.UseVisualStyleBackColor = false;
-            this.btnSolicitar_CambioTurno.Click += new System.EventHandler(this.btnSolicitar_CambioTurno_Click);
             // 
             // btnSolicitar_HLibres
             // 
@@ -388,7 +335,7 @@
             this.btnSolicitar_HLibres.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSolicitar_HLibres.FlatAppearance.BorderSize = 0;
             this.btnSolicitar_HLibres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolicitar_HLibres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolicitar_HLibres.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnSolicitar_HLibres.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSolicitar_HLibres.Location = new System.Drawing.Point(36, 0);
             this.btnSolicitar_HLibres.Name = "btnSolicitar_HLibres";
@@ -405,7 +352,7 @@
             this.panelBtn_Registrar.Controls.Add(this.btnReg_Inas);
             this.panelBtn_Registrar.Controls.Add(this.btnReg_HE);
             this.panelBtn_Registrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBtn_Registrar.Location = new System.Drawing.Point(0, 148);
+            this.panelBtn_Registrar.Location = new System.Drawing.Point(0, 103);
             this.panelBtn_Registrar.Name = "panelBtn_Registrar";
             this.panelBtn_Registrar.Size = new System.Drawing.Size(292, 89);
             this.panelBtn_Registrar.TabIndex = 59;
@@ -416,7 +363,7 @@
             this.btnReg_Inas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnReg_Inas.FlatAppearance.BorderSize = 0;
             this.btnReg_Inas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReg_Inas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReg_Inas.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnReg_Inas.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnReg_Inas.Location = new System.Drawing.Point(36, 43);
             this.btnReg_Inas.Name = "btnReg_Inas";
@@ -434,7 +381,7 @@
             this.btnReg_HE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnReg_HE.FlatAppearance.BorderSize = 0;
             this.btnReg_HE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReg_HE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReg_HE.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnReg_HE.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnReg_HE.Location = new System.Drawing.Point(36, 0);
             this.btnReg_HE.Name = "btnReg_HE";
@@ -453,11 +400,11 @@
             this.btnVisualizarHorarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVisualizarHorarios.FlatAppearance.BorderSize = 0;
             this.btnVisualizarHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarHorarios.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnVisualizarHorarios.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnVisualizarHorarios.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_ver_grande;
             this.btnVisualizarHorarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizarHorarios.Location = new System.Drawing.Point(0, 59);
+            this.btnVisualizarHorarios.Location = new System.Drawing.Point(0, 0);
             this.btnVisualizarHorarios.Name = "btnVisualizarHorarios";
             this.btnVisualizarHorarios.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnVisualizarHorarios.Size = new System.Drawing.Size(292, 49);
@@ -484,7 +431,7 @@
             this.panelAviso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelAviso.Controls.Add(this.txtDescripcion);
             this.panelAviso.Controls.Add(this.lblTitulo1);
-            this.panelAviso.Location = new System.Drawing.Point(134, 132);
+            this.panelAviso.Location = new System.Drawing.Point(49, 81);
             this.panelAviso.Name = "panelAviso";
             this.panelAviso.Size = new System.Drawing.Size(363, 238);
             this.panelAviso.TabIndex = 60;
@@ -533,7 +480,7 @@
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.txtDescripcion4);
             this.panel2.Controls.Add(this.lblTitulo4);
-            this.panel2.Location = new System.Drawing.Point(532, 419);
+            this.panel2.Location = new System.Drawing.Point(447, 368);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(370, 238);
             this.panel2.TabIndex = 132;
@@ -569,7 +516,7 @@
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel5.Controls.Add(this.txtDescripcion3);
             this.panel5.Controls.Add(this.lblTitulo3);
-            this.panel5.Location = new System.Drawing.Point(134, 419);
+            this.panel5.Location = new System.Drawing.Point(49, 368);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(363, 238);
             this.panel5.TabIndex = 132;
@@ -605,7 +552,7 @@
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel6.Controls.Add(this.txtDescripcion2);
             this.panel6.Controls.Add(this.lblTitulo2);
-            this.panel6.Location = new System.Drawing.Point(532, 132);
+            this.panel6.Location = new System.Drawing.Point(447, 81);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(370, 238);
             this.panel6.TabIndex = 132;
@@ -640,7 +587,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 790);
+            this.ClientSize = new System.Drawing.Size(1188, 679);
             this.Controls.Add(this.panelBIPO);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -677,10 +624,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTipoPerfil;
         private System.Windows.Forms.Label lblNombreUsuario;
-        private System.Windows.Forms.Button btnDistribuir_Personal;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnSolicitar;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnConfiguracion;
         private System.Windows.Forms.Panel panel1;
@@ -693,7 +638,6 @@
         private System.Windows.Forms.Button btnReg_HE;
         private System.Windows.Forms.Panel panelBtn_Solicitar;
         private System.Windows.Forms.Button btnSolicitar_HLibres;
-        private System.Windows.Forms.Button btnSolicitar_CambioTurno;
         private System.Windows.Forms.Panel panelAviso;
         private System.Windows.Forms.Button btnNotificaciones;
         private System.Windows.Forms.Panel panelBIPO;

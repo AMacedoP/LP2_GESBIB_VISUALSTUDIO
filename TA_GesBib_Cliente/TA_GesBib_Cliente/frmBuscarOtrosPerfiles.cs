@@ -110,8 +110,13 @@ namespace TA_GesBib_Cliente
                 dtpFecha.Value = personal.fecha_ingreso;
                 txtCantidadHE.Text = personal.totalHorasExtra.ToString();
                 txtBiblioteca.Text = personal.biblioteca.nombre;
-                //var_tipoPerfil=Program.DBController.Perfil
-                if (personal.foto == null)
+                if (personal.foto != null)
+                {
+                    pbPortada.Visible = true;
+                    MemoryStream ms1 = new MemoryStream(personal.foto);
+                    pbPortada.Image = new Bitmap(ms1);
+                }
+                else
                 {
                     pbPortada.Visible = false;
                     MessageBox.Show("No hay foto encontrada");

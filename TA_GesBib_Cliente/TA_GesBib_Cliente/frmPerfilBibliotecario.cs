@@ -119,14 +119,29 @@ namespace TA_GesBib_Cliente
 
         private void btnSolicitar_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelBtn_Solicitar);
+            //showSubMenu(panelBtn_Solicitar);
+            this.btnSolicitar_HLibres_Click(sender, e);
         }
 
         private void btnDistribuir_Personal_Click(object sender, EventArgs e)
         {
+            panelBIPO.Visible = false;
+            frmDistribuirPersonalSemana frmDistribuir = new frmDistribuirPersonalSemana(this, var_usuario);
+            frmDistribuir.Location = new Point(0, 0);
+            frmDistribuir.Size = new Size(934, 675);
+            frmDistribuir.MdiParent = this;
 
-            
+            //...add
+            frmDistribuir.StartPosition = FormStartPosition.Manual;
+            frmDistribuir.Left = 0;
+            frmDistribuir.Top = 0;
+            //...
 
+            frmDistribuir.Show();
+
+            //hoy agregeishion
+            //lblBienvenido.Visible = false;
+            panelAviso.Visible = false;
         }
 
         private void muestraMensajeCerraroGuardarCambios()
@@ -214,6 +229,9 @@ namespace TA_GesBib_Cliente
 
                 //hoy agregeishion
 
+                var_frmRegistrarHE_Bibliotecario.Location = new Point(0, 0);
+                var_frmRegistrarHE_Bibliotecario.Size = new Size(934, 675);
+
                 //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
 
@@ -274,6 +292,9 @@ namespace TA_GesBib_Cliente
                     //todos los demas formularios
 
                 }
+
+                var_frmRegistrarInasis_Bibliotecario.Location = new Point(0, 0);
+                var_frmRegistrarInasis_Bibliotecario.Size = new Size(934, 675);
 
                 //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
@@ -337,6 +358,9 @@ namespace TA_GesBib_Cliente
                     //todos los demas formularios
 
                 }
+
+                var_frmSolicitarHL_Bibliotecario.Location = new Point(0, 0);
+                var_frmSolicitarHL_Bibliotecario.Size = new Size(934, 675);
 
                 //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
@@ -417,6 +441,9 @@ namespace TA_GesBib_Cliente
 
                 //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
+
+                var_frmSolicitarCambioTurno_Bibliotecario.Location = new Point(0, 0);
+                var_frmSolicitarCambioTurno_Bibliotecario.Size = new Size(934, 675);
 
                 //escondemos el submenu
                 hideSubMenu();
@@ -501,6 +528,8 @@ namespace TA_GesBib_Cliente
                 }
 
                 //hoy agregeishion
+                var_frmRespuestasSolicitudes_Bibliotecario.Location = new Point(0, 0);
+                var_frmRespuestasSolicitudes_Bibliotecario.Size = new Size(934, 675);
 
                 //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
@@ -592,6 +621,8 @@ namespace TA_GesBib_Cliente
                 }
 
                 //hoy agregeishion
+                var_frmVerHorarios_Bibliotecario.Location = new Point(0, 0);
+                var_frmVerHorarios_Bibliotecario.Size = new Size(934, 675);
 
                 //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
@@ -623,6 +654,9 @@ namespace TA_GesBib_Cliente
             else
             {
                 frmConfigurar config = new frmConfigurar(this, TipoPerfil.PerfilBibliotecario, var_usuario, var_datosUsuario);
+
+                config.Location = new Point(0, 0);
+                config.Size = new Size(934, 675);
                 config.MdiParent = this;
 
                 //...add
@@ -648,6 +682,8 @@ namespace TA_GesBib_Cliente
 
             frmRespuestaCapacitaciones  resCapas = new frmRespuestaCapacitaciones(this,
                 TipoPerfil.PerfilBibliotecario,var_usuario);
+            resCapas.Location = new Point(0, 0);
+            resCapas.Size = new Size(934, 675);
             resCapas.MdiParent = this;
 
             //...add
@@ -677,6 +713,8 @@ namespace TA_GesBib_Cliente
         {
             panelBIPO.Visible = false;
             frmBuscarOtrosPerfiles frmBuscarOtros = new frmBuscarOtrosPerfiles(this, TipoPerfil.PerfilBibliotecario);
+            frmBuscarOtros.Location = new Point(0, 0);
+            frmBuscarOtros.Size = new Size(934, 675);
             frmBuscarOtros.MdiParent = this;
 
             //...add

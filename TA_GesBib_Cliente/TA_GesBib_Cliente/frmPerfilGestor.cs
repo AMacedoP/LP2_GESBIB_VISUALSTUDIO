@@ -403,5 +403,10 @@ namespace TA_GesBib_Cliente
 
             frmBuscarOtros.Show();
         }
+
+        private void lblTipoPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

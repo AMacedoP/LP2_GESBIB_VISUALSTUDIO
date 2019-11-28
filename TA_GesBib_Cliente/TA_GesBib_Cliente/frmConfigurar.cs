@@ -39,7 +39,7 @@ namespace TA_GesBib_Cliente
 
                     //Etiquetas
                     //Botones
-                    btnBuscar.Enabled = true;
+                    //btnBuscar.Enabled = true;
                     btnModificar.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = false;
@@ -56,7 +56,7 @@ namespace TA_GesBib_Cliente
                 case Estado.Buscar:
                     //Etiquetas
                     //Botones
-                    btnBuscar.Enabled = false;
+                    //btnBuscar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = true;
@@ -64,7 +64,7 @@ namespace TA_GesBib_Cliente
                 case Estado.Modificar:
                     //Etiquetas
                     //Botones
-                    btnBuscar.Enabled = true;
+                    //btnBuscar.Enabled = true;
                     btnModificar.Enabled =false;
                     btnGuardar.Enabled = true;
                     btnCancelar.Enabled = true;
@@ -284,7 +284,6 @@ namespace TA_GesBib_Cliente
                     pbPortada.Visible = true;
                     MemoryStream ms1 = new MemoryStream(personal.foto);
                     pbPortada.Image = new Bitmap(ms1);
-                    MessageBox.Show("Si hay foto encontrada");
                 }
                 else
                 {
@@ -294,6 +293,11 @@ namespace TA_GesBib_Cliente
                 pbPortada.Visible = true;
                 estadoComponentes(Estado.Buscar);
             }
+        }
+
+        private void frmConfigurar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

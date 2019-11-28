@@ -53,8 +53,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblSemestre = new System.Windows.Forms.Label();
-            this.btnBuscarDistribucion = new System.Windows.Forms.Button();
+            this.btnGuardarDistribucion = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblFechaIni = new System.Windows.Forms.Label();
+            this.dtpInicioSem = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpFinSem = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDitribucion)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +71,7 @@
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_regresar;
             this.btnCerrar.Location = new System.Drawing.Point(37, 28);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(87, 49);
             this.btnCerrar.TabIndex = 147;
@@ -123,14 +127,14 @@
             this.hora20,
             this.hora21,
             this.hora22});
-            this.dgvDitribucion.Location = new System.Drawing.Point(37, 234);
+            this.dgvDitribucion.Location = new System.Drawing.Point(37, 342);
             this.dgvDitribucion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDitribucion.Name = "dgvDitribucion";
             this.dgvDitribucion.RowTemplate.Height = 24;
             this.dgvDitribucion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvDitribucion.Size = new System.Drawing.Size(1291, 443);
+            this.dgvDitribucion.Size = new System.Drawing.Size(1291, 335);
             this.dgvDitribucion.TabIndex = 148;
-//            this.dgvDitribucion.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvDitribucion_MouseDoubleClick);
+            this.dgvDitribucion.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDitribucion_CellMouseDoubleClick);
             // 
             // PuntoAtencion
             // 
@@ -229,17 +233,21 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.dtpFinSem);
+            this.groupBox1.Controls.Add(this.lblFechaIni);
+            this.groupBox1.Controls.Add(this.dtpInicioSem);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.lblSemestre);
-            this.groupBox1.Controls.Add(this.btnBuscarDistribucion);
+            this.groupBox1.Controls.Add(this.btnGuardarDistribucion);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(37, 118);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1291, 96);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1291, 177);
             this.groupBox1.TabIndex = 149;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Distribución";
@@ -247,7 +255,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(288, 44);
+            this.label1.Location = new System.Drawing.Point(305, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 20);
@@ -257,8 +265,8 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.textBox1.Location = new System.Drawing.Point(311, 38);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(328, 38);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(40, 32);
             this.textBox1.TabIndex = 147;
@@ -266,8 +274,8 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.txtNombre.Location = new System.Drawing.Point(147, 38);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Location = new System.Drawing.Point(164, 38);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 32);
             this.txtNombre.TabIndex = 146;
@@ -282,21 +290,22 @@
             this.lblSemestre.TabIndex = 145;
             this.lblSemestre.Text = "Semestre:";
             // 
-            // btnBuscarDistribucion
+            // btnGuardarDistribucion
             // 
-            this.btnBuscarDistribucion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnBuscarDistribucion.FlatAppearance.BorderSize = 0;
-            this.btnBuscarDistribucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarDistribucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnBuscarDistribucion.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.btnBuscarDistribucion.Location = new System.Drawing.Point(917, 27);
-            this.btnBuscarDistribucion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBuscarDistribucion.Name = "btnBuscarDistribucion";
-            this.btnBuscarDistribucion.Size = new System.Drawing.Size(348, 46);
-            this.btnBuscarDistribucion.TabIndex = 142;
-            this.btnBuscarDistribucion.Text = "BUSCAR DISTRIBUCION";
-            this.btnBuscarDistribucion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarDistribucion.UseVisualStyleBackColor = false;
+            this.btnGuardarDistribucion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnGuardarDistribucion.FlatAppearance.BorderSize = 0;
+            this.btnGuardarDistribucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarDistribucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGuardarDistribucion.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
+            this.btnGuardarDistribucion.Location = new System.Drawing.Point(935, 117);
+            this.btnGuardarDistribucion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardarDistribucion.Name = "btnGuardarDistribucion";
+            this.btnGuardarDistribucion.Size = new System.Drawing.Size(348, 46);
+            this.btnGuardarDistribucion.TabIndex = 142;
+            this.btnGuardarDistribucion.Text = "GUARDAR DISTRIBUCION";
+            this.btnGuardarDistribucion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardarDistribucion.UseVisualStyleBackColor = false;
+            this.btnGuardarDistribucion.Click += new System.EventHandler(this.btnGuardarDistribucion_Click);
             // 
             // btnGuardar
             // 
@@ -307,13 +316,49 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
             this.btnGuardar.Location = new System.Drawing.Point(955, 720);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(373, 52);
             this.btnGuardar.TabIndex = 150;
             this.btnGuardar.Text = "GUARDAR DISTRIBUCIÓN";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // lblFechaIni
+            // 
+            this.lblFechaIni.AutoSize = true;
+            this.lblFechaIni.Location = new System.Drawing.Point(24, 98);
+            this.lblFechaIni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaIni.Name = "lblFechaIni";
+            this.lblFechaIni.Size = new System.Drawing.Size(130, 20);
+            this.lblFechaIni.TabIndex = 150;
+            this.lblFechaIni.Text = "Inicio Semestre:";
+            // 
+            // dtpInicioSem
+            // 
+            this.dtpInicioSem.Location = new System.Drawing.Point(162, 93);
+            this.dtpInicioSem.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpInicioSem.Name = "dtpInicioSem";
+            this.dtpInicioSem.Size = new System.Drawing.Size(339, 26);
+            this.dtpInicioSem.TabIndex = 149;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 132);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 20);
+            this.label2.TabIndex = 152;
+            this.label2.Text = "Fin Semestre:";
+            // 
+            // dtpFinSem
+            // 
+            this.dtpFinSem.Location = new System.Drawing.Point(162, 127);
+            this.dtpFinSem.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFinSem.Name = "dtpFinSem";
+            this.dtpFinSem.Size = new System.Drawing.Size(339, 26);
+            this.dtpFinSem.TabIndex = 151;
             // 
             // frmDistribucionSemestre
             // 
@@ -328,7 +373,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDistribucionSemestre";
             this.Text = "frmDistribucionSemestre";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDitribucion)).EndInit();
@@ -363,10 +408,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hora22;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblSemestre;
-        private System.Windows.Forms.Button btnBuscarDistribucion;
+        private System.Windows.Forms.Button btnGuardarDistribucion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpFinSem;
+        private System.Windows.Forms.Label lblFechaIni;
+        private System.Windows.Forms.DateTimePicker dtpInicioSem;
     }
 }
